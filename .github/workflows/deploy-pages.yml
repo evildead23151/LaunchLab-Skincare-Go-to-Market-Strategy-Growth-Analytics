@@ -23,6 +23,18 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v6
+      - name: Validate dashboard JavaScript
+        run: |
+          python - <<'PY'
+          import re
+          from pathlib import Path
+          html = Path('subscript/index.html').read_text(encoding='utf-8')
+          match = re.search(r'<script>([\\s\\S]*?)</script>', html)
+          if not match:
+              raise SystemExit('Inline dashboard script not found')
+          Path('/tmp/subscript-inline.js').write_text(match.group(1), encoding='utf-8')
+          PY
+          node --check /tmp/subscript-inline.js
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload static site
