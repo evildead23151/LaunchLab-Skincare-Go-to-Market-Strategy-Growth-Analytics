@@ -2,7 +2,7 @@
 
 An independent product-marketing, consumer-research and go-to-market case study examining how Minimalist could improve first-time skincare buyers' understanding and purchase confidence.
 
-> **New portfolio companion:** [Open Subscript — live subscription intelligence dashboard](https://evildead23151.github.io/LaunchLab-Skincare-Go-to-Market-Strategy-Growth-Analytics/subscript/). This is a browser-based interactive demo using synthetic subscription data.
+> **Portfolio companion:** [Subscript — interactive subscription intelligence dashboard](https://evildead23151.github.io/LaunchLab-Skincare-Go-to-Market-Strategy-Growth-Analytics/subscript/). The dashboard is committed and the deployment workflow is configured. The first public release requires enabling GitHub Pages once under **Settings → Pages → Build and deployment → Source: GitHub Actions**; subsequent pushes deploy automatically. It uses synthetic subscription data.
 
 ## LaunchLab project
 
